@@ -1,4 +1,4 @@
- Base */
+/* Base */
 @font-face {
 	font-family: Helvetica Neue;
 	src: 
@@ -6,8 +6,21 @@
 		url("../fonts/Helvetica Neue/OTF/HelveticaNeue.otf");
 	font-weight: normal;
 }
+@font-face{
+	font-family: Helvetica Neue Bold;
+	src: 
+		url("../fonts/Helvetica Neue/TTF/helveticaneuebold.ttf"),
+		url("../fonts/Helvetica Neue/OTF/HelveticaNeue-Bold.otf");
+	font-weight: normal;
+}
+@font-face{
+	font-family: Open Sans;
+	src: 
+		url("../fonts/open-sans/OpenSans-Regular.ttf"),
+	font-weight: normal;
+}
 body {
-	font-family: Helvetica Neue;
+	font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;;
 	font-size: 16px;
 	line-height: 1.35;
 	font-weight: normal;
@@ -130,13 +143,13 @@ body {
 	max-width: 900px;
     position: relative;
     z-index: 50;
-    margin:0 188px;
+    margin:0 auto;
 }
 .center{
 	text-align: center;
 }
 .super-title {
-    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue Bold",Arial,Helvetica,sans-serif;
     font-size: 60px;
     line-height: 1;
     font-weight: bold;
@@ -151,13 +164,12 @@ body {
 	font-size: 16px;
 	padding: .5625em 1.5em;
 }
-.normalize{
+.normalize p{
 	font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
     font-size: 16px;
     line-height: 1.6875;
     font-weight: normal;
     letter-spacing: 0;
-    -webkit-font-smoothing: antialiased;
 }
 .span2of3{
 	width: 66.666667%;
@@ -191,4 +203,19 @@ body {
 }
 .cta-link:hover{
 	text-decoration: underline;
+}
+/*---section---*/
+.section {
+    padding: 15vh 0 20vh;
+    position: relative;
+    display: block;
+    clear: both;
+    vertical-align: top;
+}
+/*---section send---*/
+.section--send {
+    padding: 15vh 0 15vh;
+}
+.span1of2{
+	width: 50%;
 }
