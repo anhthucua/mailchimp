@@ -1,0 +1,106 @@
+@media screen and (min-width: 1004px){
+	.nav .item {
+    padding: 0 24px;
+	}
+} 
+@media screen and (max-width: 1004px){
+	/*nav*/
+	.nav-menu-actions, .nav-menu-close{
+		cursor: pointer;
+	}
+	.nav-menu-actions{
+		display: block;
+	}
+	.nav-links {
+	    height: calc(100vh - 60px);
+	    top: 60px;
+	    bottom: auto;
+	    /*opacity: 1;*/
+	}
+	.nav .nav-links {
+	    position: absolute;
+	    bottom: 60px;
+	    left: 0;
+	    right: 0;
+	    background: #f9f9f9;
+	    border-top: 1px solid #dcdcdc;
+	    display: -webkit-inline-flex;
+	    display: -ms-inline-flexbox;
+	    display: inline-flex;
+	    box-sizing: border-box;
+	    padding-top: 12px;
+	    /*opacity: 0;*/
+	    -webkit-flex-direction: column-reverse;
+	    -ms-flex-direction: column-reverse;
+	    flex-direction: column-reverse;
+	    -webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	    justify-content: flex-end;
+	    transition: opacity .2s ease;
+	    visibility: hidden;
+	}
+	.nav-links--left{
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-links--right{
+		display: flex;
+		flex-direction: column;
+		flex-grow:  unset !important;
+		justify-content: center !important;
+	}
+	.sign-up .btn-small{
+		transition: unset;
+	}
+	/*section automate*/
+	.section--automate .content{
+		display: flex;
+		flex-direction: column;
+	}
+	.section--automate .span1of2{
+		width:100%;
+	}
+	.section--automate .col:first-child {
+	    padding-left: 0 !important;
+	}
+	/*footer*/
+	.large-span1of3 {
+    	width: 33.33333% !important;
+	}
+	/*global*/
+	
+}
+@media screen and (max-width: 480px){
+	.content{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.section--send .bg-image{
+	    top: -60px;
+	    margin-left: 90px;
+	    background-size: 50%;
+	}
+	.span1of3, .span1of2, .span2of3{
+		width: 100%;
+	}
+	.section--automate .bg-texture {
+	    background-size: 66%;
+	    margin-top: -370px;
+	    margin-left: -570px;
+	}
+	.mid-span1of5{
+		width: 50%;
+	}
+	.block-mobile{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.adds-container {
+	    height: 15rem;
+	}
+	.sign-up-mobile{
+		text-align: left;
+	}
+	.pt4{
+		display: flex;
+	}

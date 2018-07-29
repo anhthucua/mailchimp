@@ -7,6 +7,7 @@
 	<title>Marketing Platform for Small Businesses - Sell More Stuff | MailChimp</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 	<nav class="nav">
@@ -15,7 +16,7 @@
 				<img src="images/ic-monkey.svg" alt="home" class="freddie-monkey">
 			</div>
 		</a>
-		<div class="nav-links">
+		<div class="nav-links" id="nav-links">
 			<div class="nav-links--left">
 				<a href="https://mailchimp.com/features/" class="item">Features</a>
 				<a href="https://mailchimp.com/pricing/" class="item">Pricing</a>
@@ -35,8 +36,36 @@
 			<a href="https://mailchimp.com/search/" class="item">
 				<img src="images/ic-find.svg" alt="find" class="find">
 			</a>
+			<div class="nav-menu-actions" id="menu">
+				<a aria-hidden="" aria-label="Open Menu" class="item site-nav-menu-open" data-behavior="site-nav:open" data-ga-label="Open Menu" href="#site-footer" role="presentation">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" class="svg-icon">
+  						<title>Menu</title>
+  						<path d="M170.666 170.666h682.668v136.534h-682.668zm0 273.068h682.668v136.532h-682.668zm0 273.066h682.668v136.534h-682.668z"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-menu-close" id="close">
+					<a href="#page" class="item">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="svg-icon">
+								<title>Close</title>
+								<path d="M439.604 512l-253.39-253.388 72.396-72.396 253.39 253.388 253.388-253.388 72.396 72.396-253.388 253.388 253.388 253.388-72.396 72.396-253.388-253.388-253.388 253.388-72.396-72.396 253.388-253.388z"></path>
+						</svg>
+					</a>
+			</div>
 		</div>
 	</nav>
+	<script>
+		document.getElementById("menu").addEventListener("click", function(){
+		    document.getElementById("nav-links").style.visibility = "unset";
+		    document.getElementById("menu").style.display = "none";
+		    document.getElementById("close").style.display = "block";
+		});
+		document.getElementById("close").addEventListener("click", function(){
+		    document.getElementById("nav-links").style.visibility = "hidden";
+		    document.getElementById("menu").style.display = "block";
+		    document.getElementById("close").style.display = "none";
+		});
+	</script>
 	<!-- end nav -->
 	<header class="page-header">
 		<div class="content center">
@@ -54,7 +83,7 @@
 						MailChimp is the world’s largest <a href="https://mailchimp.com/features/marketing-automation/" class="cta-link bold" >marketing automation platform</a> . It’s like a <a href="https://mailchimp.com/brain/" class="cta-link bold">second brain</a>  that helps millions of customers—from small e-commerce shops to big online retailers—find their audience, engage their customers, and build their brand.
 					</p>
 				</div>
-			</div>
+			</div>	
 		</div>
 		<div class="bg-image lazyload loading loaded"  style="background-image: url(images/collage-tl-2x.jpg);">
 			
@@ -63,50 +92,306 @@
 	<!-- end header -->
 	<main class="main">
 		<section class="section--send section">
-			<artical class="content">
+			<div class="content">
 				<div class="span1of2">
 					<h2 class="">Send better email</h2>
 					<p>
 						Whether you need to sell your products, share some big news, or tell a story, our campaign builder makes it easy to create an <a href="https://mailchimp.com/email-marketing/" class="cta-link bold">email marketing campaign</a>  that best suits your message.
 					</p>
 				</div>
-				<div class="bg-image lazyload loading loaded" style="background-image: url(images/collage-send-2x.jpgco);"></div>
-			</artical>
+				<div class="background-section-send" style>
+					<img src="images/section-send.jpg" alt="section-send-bg">
+				</div>
+				<div class="bg-texture lazyload loading loaded" style="background-image: url(images/texture-send-bg-2x.png);">
+			</div>
+			</div>
+			<div class="bg-image lazyload loading loaded" style="background-image: url(images/collage-send-2x.jpg);">
+				</div>
 		</section>
 
-		<section class="section--automate">
-			<artical class="content">
-				
-			</artical>
+		<section class="section--automate section">
+			<div class="content">
+				<div class="span1of2 col middle">
+					<h2>Automate your marketing</h2>
+					<p>
+						Keep a personal touch while removing manual tasks from your to-do list. Pre-built <a href="/features/marketing-automation" class="cta-link">marketing automation</a> creates room to focus on strategy. Welcome, re-engage, and follow up with the people who matter to you. If you're new to marketing automation, get up to speed with one of our nifty guides: <a href="/features/marketing-automation" class="cta-link">What is Marketing Automation?</a>
+					</p>
+				</div>
+				<div class="span1of2">
+					<a href="https://mailchimp.com/features/marketing-automation/" class="cta-link">
+						<img src="images/screenshot-automate-2x-43588d3c.png" alt="Automate" class="lazyload loading loaded img3">
+						<div class="bg-texture lazyload loading loaded" style="background-image: url(images/collage-automate-2x.jpg);">
+						</div>
+					</a>
+				</div>
+			</div>
 		</section>
 
-		<section class="section--sell">
-			<artical class="content">
-				
-			</artical>
+		<section class="section--sell section">
+			<div class="content center">
+				<div class="block span2of3">
+					<h2>Put your data to work</h2>
+					<p>
+						MailChimp integrates with all the major <a href="https://mailchimp.com/integrations" class="cta-link">e-commerce providers</a> so you can use your purchase data to send personalized campaigns and better understand how your marketing affects your bottom line. </p>
+				</div>
+				<div class="col">
+					<a class="cta-link" href="https://mailchimp.com/integrations">
+						<img alt="Sell" class="lazyload loading loaded img-sell" src="images/collage-sell-2x-2d075b5d.jpg">
+					</a>
+				</div>
+				<div class="block span1of1 block-mobile">
+					<div class="col span1of5 ptb3 mid-span1of5">
+						<a href="" class="cta-link">
+							<img alt="Shopify" class="lazyload loading loaded part-sell" src="images/shopify.png">
+						</a>
+					</div>
+					<div class="col span1of5 ptb3 mid-span1of5">
+						<a href="https://mailchimp.com/integrations/magento/" class="cta-link">
+							<img alt="Magento" class="lazyload loading loaded part-sell " src="images/magento.png">
+						</a>
+					</div>
+					<div class="col span1of5 ptb3 mid-span1of5">
+						<a href="https://mailchimp.com/integrations/bigcommerce/" class="cta-link">
+							<img alt="Bigcommerce" class="lazyload loading loaded part-sell" src="images/bigcommerce.png">
+						</a>
+					</div>
+					<div class="col span1of5 ptb3 mid-span1of5">
+						<a href="https://mailchimp.com/integrations/woocommerce/" class="cta-link">
+							<img alt="Woocommerce" class="lazyload loading loaded part-sell" src="images/woocommerce.png">
+						</a>
+					</div>
+					<div class="col span1of5 ptb3 mid-span1of5">
+						<a href="https://mailchimp.com/integrations/prestashop/" class="cta-link">
+							<img alt="Prestashop" class="lazyload loading loaded part-sell" src="images/prestashop-1831409b.png">
+						</a>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section class="section--announce">
-			<artical class="content">
-				
-			</artical>
+		<section class="section--announce section">
+			<div class="content">
+				<div class="col span2of3">
+					<h2>Find your people</h2>
+					<p>
+						Our 3 advertising channels help you reach every audience. Use our integrated <a href="/features/facebook-ads" class="cta-link">Facebook</a> and <a href="/features/instagram-ads/" class="cta-link">Instagram</a> ad campaigns to find new customers and reconnect with others. Then, use <a href="/features/google-remarketing-ads/" class="cta-link">Google</a> remarketing ads to convert your website visitors into shoppers. 
+					</p>
+					<h3>Advertise on:</h3>
+				</div>
+				<div class="col span1of1 adds-container">
+					<div class="img google-ads">
+						<a class="cta-link"href="https://mailchimp.com/features/google-remarketing-ads">
+							<img class="img-ads lazyload  loading loaded" src="images/card_g-6f5d862e.jpg" alt="Google Remarketing Ads">
+						</a>
+					</div>
+					<div class="img instagram-ads">
+						<a class="cta-link"href="https://mailchimp.com/features/instagram-ads">
+							<img class="img-ads lazyload  loading loaded" src="images/card_instagram-5c3e39d4.jpg" alt="Instagram Ads">
+						</a>
+					</div>
+					<div class="img facebook-ads">
+						<a class="cta-link"href="https://mailchimp.com/features/facebook-ads">
+							<img class="img-ads lazyload  loading loaded" src="images/card_facebook-3f86dea2.jpg" alt="Facebook Advertise">
+						</a>
+					</div>
+				</div>
+				<div class="col span1of1 sub">
+					<p class="type-light inline-block">Product photos from
+					<a class="cta-link" href="https://www.shoesofprey.com/" target="_blank">Shoes of Prey</a></p>
+				</div>
+			</div>
+			<div class="bg-texture top lazyload loading loaded"  style="background-image: url(images/texture-advertise-2x.png);">	
+			</div>
+			<div class="bg-texture-fill">	
+			</div>
 		</section>
 
-		<section class="section--grow">
-			<artical class="content">
-				
-			</artical>
+		<section class="section--grow section">
+			<div class="content">
+				<div class="block span1of1 center">
+					<div class="col span2of3">
+						<h2>See how you’re doing</h2>
+						<p>
+							There’s always room to be better. <a href="/features/reports" class="cta-link">MailChimp reports</a> show you how well you’re connecting with your audience and how much money you’re bringing in. We’ll give you customized tips for improvement, and you can check in from anywhere with our mobile dashboard.
+						</p>
+					</div>
+					<div class="col span7of8">
+						<div class="">
+							<a class="cta-link" href="/features/reports">
+								<img alt="Grow" class="lazyload loading loaded" width="100%" src="images/collage-grow-2x-29276e3b2-3935dcca.png">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section class="section--sign-up">
-			<artical class="content">
-				
-			</artical>
+		<section class="section--sign-up section">
+			<div class="content">
+				<div class="block span1of1 center ">
+					<div class="col span1of1 sign-up-mobile">
+						<h2>Get started today</h2>
+						<p>MailChimp gives you the marketing tools to be yourself on a bigger stage.</p><a class="cta-link btn-small" href="https://mailchimp.com/signup/" title="Sign Up Free" syl>Sign Up Free</a>
+					</div>
+				</div>
+			</div>
+			<div class="bg-texture lazyload loading loaded" style="background-image: url(images/texture-signup-2x.png);">
+			</div>
+			<div class="bg-texture-fill"></div>
 		</section>
 	</main>
 	<!-- end main -->
 	<footer class="page-footer">
-		footer
+		<div class="content center">
+			<div class="flex span1of1 align-left">
+				<div class="col span1of5 large-span1of3 mid-span1of3 small-span1of2 align-left pb8">
+					<h2 class="subheading">Features</h2>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a class="menu-link" href="/features/marketing-automation/">Marketing Automation</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/email-templates/">Email Templates</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/abandoned-cart/">Abandoned Cart</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/landing-pages/">Landing Pages</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/google-remarketing-ads/">
+							Google Remarketing Ads</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/facebook-ads/">Facebook Ads</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/instagram-ads/">Instagram Ads</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/product-recommendations/">Product Recommendations</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/features/mailchimp-mobile/">Mobile App</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col span1of5 large-span1of3 mid-span1of3 small-span1of2 align-left pb8">
+					<h2 class="subheading">Tools</h2>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a class="menu-link" href="/integrations/">Integrations</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="http://templates.mailchimp.com">Email Design Reference</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="http://developer.mailchimp.com/documentation/mailchimp/">API Docs</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="http://status.mailchimp.com">Status</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col span1of5 large-span1of3 mid-span1of3 small-span1of2 align-left pb8">
+					<h2 class="subheading">Resources</h2>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a class="menu-link" href="/resources/guides/">Guides</a>
+						</li>
+						<li class="menu-item"><a class="menu-link" href="/resources/research/">Research</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="http://experts.mailchimp.com">Experts</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/agencies/">Agencies</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/events/">Events</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col span1of5 large-span1of3 mid-span1of3 small-span1of2 align-left pb8">
+					<h2 class="subheading">About</h2>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a class="menu-link" href="/about/">About MailChimp</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/about/jobs/">Jobs</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/about/brand-assets/">Brand Assets</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/about/investor-relations/">Investor Relations</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/legal/">Terms of Service</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col span1of5 large-span1of3 mid-span1of3 small-span1of2 align-left pb8">
+					<h2 class="subheading">Contact Us</h2>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a class="menu-link" href="/contact/">Contact MailChimp</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/contact/abuse/">Abuse Desk</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/about/press-resources/">Press Resources</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="/contact/feedback/">Application Feedback</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col">
+				<a href="https://mailchimp.com/" class="script-logo">
+					<img class="mail-chimp"src="images/ic-mailChimfo.svg" alt="mailchimp">
+				</a>
+			</div>
+			<div class="col span1of1 center">
+				<p>
+					©2001-2018 All Rights Reserved. MailChimp® is a registered trademark of The Rocket Science Group. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. Mac App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google Inc. <a href="/legal/privacy/">Privacy</a> and <a href="/legal/">Terms</a>
+				</p>
+			</div>
+			<div class="col span1of1 pt5 center">
+				<a class="social-link" href="https://www.facebook.com/mailchimp/">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="svg-icon"><title>Facebook</title><path d="M45.353 0h-42.706a2.625 2.625 0 0 0-2.647 2.647v42.706a2.625 2.625 0 0 0 2.647 2.647h23.008v-18.569h-6.268v-7.241h6.229v-5.333c0-6.19 3.776-9.577 9.3-9.577a56.108 56.108 0 0 1 5.606.273v6.462h-3.851c-3 0-3.581 1.44-3.581 3.543v4.632h7.163l-.934 7.241h-6.229v18.569h12.263a2.625 2.625 0 0 0 2.647-2.647v-42.706a2.625 2.625 0 0 0-2.647-2.647z"></path>
+					</svg>
+				</a>
+				<a class="social-link" href="https://twitter.com/MailChimp">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="svg-icon"><title>Twitter</title><path d="M48 9.117a19.935 19.935 0 0 1-5.658 1.55 9.855 9.855 0 0 0 4.324-5.441 19.789 19.789 0 0 1-6.234 2.374 9.866 9.866 0 0 0-17.045 6.739 9.238 9.238 0 0 0 .252 2.234 27.932 27.932 0 0 1-20.287-10.267 9.555 9.555 0 0 0-1.333 4.937 9.815 9.815 0 0 0 4.36 8.18 9.851 9.851 0 0 1-4.469-1.223v.108a9.858 9.858 0 0 0 7.89 9.656 10.248 10.248 0 0 1-2.595.36 9.932 9.932 0 0 1-1.838-.18 9.946 9.946 0 0 0 9.189 6.847 19.745 19.745 0 0 1-12.213 4.216 16.691 16.691 0 0 1-2.343-.144 28 28 0 0 0 15.1 4.437c18.09 0 28-14.991 28-28 0-.432 0-.865-.036-1.261a20.192 20.192 0 0 0 4.936-5.122z"></path>
+					</svg>
+				</a>
+				<a class="social-link" href="https://www.instagram.com/mailchimp/">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="svg-icon"><title>Instagram</title><path d="M24 4.324c6.408 0 7.167.024 9.7.14a13.28 13.28 0 0 1 4.456.826 7.436 7.436 0 0 1 2.76 1.8 7.436 7.436 0 0 1 1.8 2.76 13.28 13.28 0 0 1 .826 4.456c.115 2.531.14 3.29.14 9.7s-.024 7.167-.14 9.7a13.28 13.28 0 0 1-.826 4.456 7.948 7.948 0 0 1-4.555 4.555 13.28 13.28 0 0 1-4.456.826c-2.53.115-3.289.14-9.7.14s-7.168-.024-9.7-.14a13.28 13.28 0 0 1-4.456-.826 7.436 7.436 0 0 1-2.76-1.8 7.436 7.436 0 0 1-1.8-2.76 13.28 13.28 0 0 1-.825-4.457c-.115-2.531-.14-3.29-.14-9.7s.024-7.167.14-9.7a13.28 13.28 0 0 1 .826-4.456 7.436 7.436 0 0 1 1.8-2.76 7.436 7.436 0 0 1 2.76-1.8 13.28 13.28 0 0 1 4.45-.82c2.531-.115 3.29-.14 9.7-.14m0-4.324c-6.518 0-7.335.028-9.9.144a17.615 17.615 0 0 0-5.821 1.116 11.764 11.764 0 0 0-4.251 2.768 11.764 11.764 0 0 0-2.768 4.251 17.615 17.615 0 0 0-1.116 5.821c-.116 2.565-.144 3.382-.144 9.9s.028 7.335.144 9.9a17.616 17.616 0 0 0 1.116 5.821 11.765 11.765 0 0 0 2.768 4.251 11.764 11.764 0 0 0 4.251 2.768 17.615 17.615 0 0 0 5.821 1.116c2.565.116 3.382.144 9.9.144s7.335-.028 9.9-.144a17.616 17.616 0 0 0 5.826-1.116 12.272 12.272 0 0 0 7.019-7.019 17.616 17.616 0 0 0 1.111-5.821c.116-2.565.144-3.382.144-9.9s-.028-7.335-.144-9.9a17.616 17.616 0 0 0-1.116-5.821 11.764 11.764 0 0 0-2.768-4.251 11.764 11.764 0 0 0-4.251-2.768 17.616 17.616 0 0 0-5.821-1.116c-2.565-.116-3.382-.144-9.9-.144zm0 11.676a12.324 12.324 0 1 0 12.324 12.324 12.324 12.324 0 0 0-12.324-12.324zm0 20.324a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm12.811-23.691a2.88 2.88 0 1 0 2.88 2.88 2.88 2.88 0 0 0-2.88-2.88z"></path>
+					</svg>
+				</a>
+				<a class="social-link" href="https://www.linkedin.com/company/mailchimp">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="svg-icon"><title>LinkedIn</title><path d="M0 0v48h48v-48h-48zm14.8 40.64h-6.92v-22.24h6.92v22.24zm-3.48-25.28a4 4 0 1 1 4-4 3.986 3.986 0 0 1-4 4zm22.44 25.28v-10.8c0-2.56-.04-5.88-3.6-5.88-3.6 0-4.16 2.8-4.16 5.72v11h-6.88v-22.28h6.64v3.04h.08a7.21 7.21 0 0 1 6.52-3.6c7 0 8.28 4.6 8.28 10.6v12.2h-6.88z"></path>
+					</svg>
+				</a>
+				<a class="social-link" href="https://www.youtube.com/user/MailChimp">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 721" class="svg-icon"><title>YouTube</title><path d="M1013,156.3c0,0-10-70.4-40.6-101.4C933.6,14.2,890,14,870.1,11.6C727.1,1.3,512.7,1.3,512.7,1.3h-0.4c0,0-214.4,0-357.4,10.3C135,14,91.4,14.2,52.6,54.9C22,85.9,12,156.3,12,156.3S1.8,238.9,1.8,321.6v77.5C1.8,481.8,12,564.4,12,564.4s10,70.4,40.6,101.4c38.9,40.7,89.9,39.4,112.6,43.7c81.7,7.8,347.3,10.3,347.3,10.3s214.6-0.3,357.6-10.7c20-2.4,63.5-2.6,102.3-43.3c30.6-31,40.6-101.4,40.6-101.4s10.2-82.7,10.2-165.3v-77.5C1023.2,238.9,1013,156.3,1013,156.3z M407,493l0-287l276,144L407,493z"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="block span1of1 center pt4">
+				<a class="app-link" href="https://itunes.apple.com/app/apple-store/id366794783?pt=349030&ct=MailChimp.com&mt=8">
+					<img src="images/ic-apple.svg" alt="app store">
+				</a>
+				<a class="app-link" href="https://play.google.com/store/apps/details?id=com.mailchimp.mailchimp">
+					<img src="images/ic-google.svg" alt="google play">
+				</a>
+			</div>
+		</div>
 	</footer>
 	<!-- end footer -->
 </body>
